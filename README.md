@@ -1,4 +1,5 @@
 To Do List
+
 Un program simplu ce reprezinta o lista de tip reminder.
 
 # Functionalitati
