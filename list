@@ -1,0 +1,50 @@
+sarcini = [
+  
+  {
+  "task": "Invata Python",
+  "status": False
+},
+ 
+ {
+  "task": "Fa sport",
+  "status": False
+ },
+  
+ {
+  "task": "Citeste",
+  "status": False
+ }
+]
+def afiseaza_sarcini():
+  for index, sarcina in enumerate(sarcini):
+  
+    if sarcina["status"] == True:
+      status = "[x]"
+    else:
+      status = "[ ]"
+  
+    print(index + 1, sarcina["task"], status)
+def adauga_sarcina():
+    task_nou = input("Lucruri pe care le am de facut:\n")
+    sarcini.append({
+  "task": task_nou,
+  "status": False
+})
+def bifeaza_sarcina():
+    afiseaza_sarcini()
+    numar = int(input("Ce sarcina vrei sa bifezi\n"))
+    sarcini[numar - 1]["status"] = True
+while True:
+    print("1. Afiseaza sarcini")
+    print("2. Adauga sarcina")
+    print("3. Bifeaza sarcina")
+    print("4. Iesire")
+    optiune = int(input("Alege o optiune:\n"))
+    if optiune == 1:
+      afiseaza_sarcini()
+    elif optiune == 2:
+      adauga_sarcina()
+    elif optiune ==3:
+      bifeaza_sarcina()
+    elif optiune ==4:
+      break
